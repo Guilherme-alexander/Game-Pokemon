@@ -1,5 +1,7 @@
 # Jogo de Batalha Pokémon
 
+### 🎮 [ [Click here to start the game](https://guilherme-alexander.github.io/Game-Pokemon/) ] 🎮
+
 Este é um jogo de batalha Pokémon simples, desenvolvido em JavaScript, que permite ao jogador selecionar um Pokémon e lutar contra inimigos aleatórios.
 
 ## Funcionalidades
