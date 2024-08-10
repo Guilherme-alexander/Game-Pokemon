@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=VT323&display=swap');
+
+:root {
+    --font1: 'Silkscreen', cursive;
+    ;
+    --font2: 'VT323', monospace;
+    ;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 20px;
+}
+
+h2 {
+    font-size: 16px;
+}
+
+h3 {
+    font-size: 14px;
+}
+
+p {
+    font-size: 10px;
+    margin: 5px 0px;
+}
+
+h1,
+h2,
+h3,
+p,
+a {
+    font-family: var(--font1);
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    font-family: var(--font1);
+}
+
+button {
+    font-family: var(--font1);
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.telaInimigo {
+    width: 100%;
+    height: 230px;
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: #ccc;
+}
+
+.pokemonInimigoStatus {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* img.inimigoPokemon{
+    width: 70px;
+} */
+
+.vidaPokemonInimigo {
+    width: 100px;
+    height: 15px;
+    text-align: center;
+    background-color: white;
+}
+
+.inimigoVida {
+    width: 100%;
+    height: 15px;
+    background-color: #0f0;
+    border: 2px solid #fff;
+}
+
+.ataquesInimigo li {
+    color: #a1a1a1;
+    margin: 10px;
+}
+
+.dano {
+    background-color: red;
+}
+
+.inimigoVida.dano {
+    transition: 1s;
+    background-color: #ff1100;
+    animation: 1s ease 0s move-hp-inimigo;
+}
+
+
+/* PLAYER */
+
+.telaPlayer {
+    width: 100%;
+    height: 230px;
+    display: flex;
+    background-color: #ccc;
+}
+
+.pokemonStatus {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red;   */
+}
+
+/* img.MyPokemon{
+    width: 60px;
+} */
+
+.VidaPokemonPlayer {
+    width: 100px;
+    height: 15px;
+    background-color: white;
+}
+
+.pokemonVida {
+    width: 100%;
+    height: 15px;
+    background-color: #0f0;
+    border: 2px solid #fff;
+}
+
+.pokemonVida.dano {
+    transition: 1s;
+    background-color: #ff1100;
+    animation: 1s ease 0s move-hp-player;
+}
+
+.ataques {
+    width: 50%;
+    padding: 25px;
+    /* background-color: blue; */
+}
+
+.ataques ul li {
+    margin: 10px;
+}
+
+.ataques ul li button {
+    padding: 5px 15px;
+    border: 1px solid #000;
+    /* color:#fff; */
+    /* background-color: transparent; */
+}
+
+.ataques ul li button:active {
+    background-color: #a1a1a1;
+}
+
+.init {
+    width: 100%;
+    height: 230px;
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.init h1 {
+    color: rgb(0, 89, 255);
+}
+
+.Start {
+    padding: 10px 15px;
+    margin: 10px;
+}
+
+.messagem {
+    width: 100%;
+    height: 30px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.selectMyPokemon {
+    width: 355px;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.selectMyPokemon input {
+    font-family: var(--font1);
+    padding: 5px;
+}
+
+.selectMyPokemon button {
+    padding: 8px;
+}
+
+.pokemonVida,
+.inimigoVida {
+    height: 15px;
+    background-color: #0f0;
+    transition: width 0.5s;
+}
+
+.dano {
+    background-color: red;
+}
+
+.boxSetPokemonList {
+    width: 100%;
+    margin: 0 auto;
+    user-select: none;
+}
+
+.listPokemon {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.pokemons {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+    border: 1px solid #a1a1a1;
+    cursor: pointer;
+}
+
+
+@keyframes move-hp-player {
+    from {
+        background-color: #0f0;
+    }
+
+    to {
+        background-color: #ff1100;
+    }
+}
+
+
+@keyframes move-hp-inimigo {
+    from {
+        background-color: #0f0;
+    }
+
+    to {
+        background-color: #ff1100;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .listPokemon {
+        flex-wrap: wrap;
+    }
+
+    .pokemons {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media screen and (max-width:550px) {
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 12px;
+        margin: 5px 0px;
+    }
+
+    h1,
+    h2,
+    h3,
+    p,
+    a {
+        font-family: var(--font2);
+    }
+
+    .telaPlayer {
+        height: 400px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .ataques {
+        width: 80%;
+    }
+
+    .selectMyPokemon {
+        width: 95%;
+        display: block;
+        margin: 5px;
+    }
+
+    .selectMyPokemon input {
+        width: 100%;
+    }
+
+    .selectMyPokemon button {
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width:250px) {
+    .pokemonInimigoStatus {
+        width: 100%;
+    }
+
+    .ataques {
+        width: 100%;
+        padding: 2%;
+    }
+
+    .ataquesInimigo {
+        display: none;
+    }
+
+    .messagem {
+        height: 45px;
+        text-align: center;
+    }
+}

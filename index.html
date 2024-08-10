@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Pokemon</title>
+</head>
+
+<body>
+    <div class="tela">
+        <div class="telaInimigo">
+            <div class="pokemonInimigoStatus">
+                <img class="inimigoPokemon" alt="Meu Pokemon">
+                <h2 class="nomeInimigoPokemon">NOME</h2>
+                <h3>HP</h3>
+                <div class="vidaPokemonInimigo">
+                    <div class="inimigoVida"></div>
+                </div>
+                <p class="hpInimigo">60/60</p>
+            </div>
+            <div class="ataquesInimigo">
+                <h3>Inimigo Do Inimigo</h3>
+                <ul>
+                    <li id="move1">choque do Trovão</li>
+                    <li id="move2">Calda de Ferro</li>
+                    <li id="move3">Ataque Rápido</li>
+                    <li id="move4">Esfera Elétrica</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="messagem">
+            <h3 class="Text">Vs</h3>
+        </div>
+
+        <div class="telaPlayer">
+            <div class="pokemonStatus">
+                <img class="MyPokemon" alt="Meu Pokemon">
+                <h2 class="nomePokemon">NOME</h2>
+                <h3>HP</h3>
+                <div class="VidaPokemonPlayer">
+                    <div class="pokemonVida"></div>
+                </div>
+                <p class="hpPlayer">60/60</p>
+            </div>
+            <div class="ataques">
+                <h3>Escolha Seu Ataque</h3>
+                <ul>
+                    <li><button id="move1Player" onclick="ataque('atk1')"></button></li>
+                    <li><button id="move2Player" onclick="ataque('atk2')"></button></li>
+                    <li><button id="move3Player" onclick="ataque('atk3')"></button></li>
+                    <li><button id="move4Player" onclick="ataque('atk4')"></button></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="init">
+        <h1>Iniciar Game</h1>
+    </div>
+
+    <button class="Start" onclick="gerarInimigo()">GERAR INIMIGO</button>
+
+    <h2>Escolha Seu Pokemon Pelo ID</h2>
+    <br />
+    <div class="selectMyPokemon">
+        <input type="text" placeholder="ID - Escolha Seu Pokemon" value="25">
+        <button>selecionar</button>
+    </div>
+
+    <div class="boxSetPokemonList">
+        <div class="listPokemon">
+            <div class="pokemons" onclick="myPokemonInit(25)">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/25.gif"
+                    alt="">
+            </div>
+            <div class="pokemons" onclick="myPokemonInit(1)">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/1.gif"
+                    alt="">
+            </div>
+            <div class="pokemons" onclick="myPokemonInit(4)">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/4.gif"
+                    alt="">
+            </div>
+            <div class="pokemons" onclick="myPokemonInit(7)">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/7.gif"
+                    alt="">
+            </div>
+            <div class="pokemons" onclick="myPokemonInit(152)">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/152.gif"
+                    alt="">
+            </div>
+            <div class="pokemons" onclick="myPokemonInit(155)">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/155.gif"
+                    alt="">
+            </div>
+            <div class="pokemons" onclick="myPokemonInit(158)">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/158.gif"
+                    alt="">
+            </div>
+            <div class="pokemons" onclick="myPokemonInit(252)">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/252.gif"
+                    alt="">
+            </div>
+            <div class="pokemons" onclick="myPokemonInit(255)">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/255.gif"
+                    alt="">
+            </div>
+            <div class="pokemons" onclick="myPokemonInit(258)">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/258.gif"
+                    alt="">
+            </div>
+            <div class="pokemons" onclick="myPokemonInit(387)">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/387.gif"
+                    alt="">
+            </div>
+            <div class="pokemons" onclick="myPokemonInit(390)">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/390.gif"
+                    alt="">
+            </div>
+            <div class="pokemons" onclick="myPokemonInit(393)">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/393.gif"
+                    alt="">
+            </div>
+        </div>
+    </div>
+    <p style="margin: 10px;">Use ID da Pokedex </p>
+    <a style="margin: 10px;" href="https://guilherme-alexander.github.io/Pokedex/">Pokedex</a>
+    <script src="script.js"></script>
+</body>
+
+</html>
