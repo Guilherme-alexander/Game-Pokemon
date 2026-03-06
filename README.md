@@ -4,6 +4,10 @@
 
 Este é um jogo de batalha Pokémon simples, desenvolvido em JavaScript, que permite ao jogador selecionar um Pokémon e lutar contra inimigos aleatórios.
 
+<img src="https://github.com/Guilherme-alexander/Game-Pokemon/blob/main/Captura.jpeg" />
+
+<br/>
+
 ## Funcionalidades
 
 - Seleção de Pokémon do jogador
